@@ -6,6 +6,7 @@ import './App.css';
 import Titol from './components/titol/Titol';
 // NOTE per que s'importi automaticament recordar que al crearlo <Modal (intro)
 import Modal from './components/modal/Modal';
+import Llistat_despesses from './components/despessesLlista/DespessesLlista';
 
 
 // ESTATS
@@ -69,13 +70,8 @@ function App() {
       )
       }
 
-      { mostrarDespeses && 
-        despeses.map((despesa, index)=>(
-          <React.Fragment key={despesa.id}>
-            <h2>{index+1} - {despesa.concepte}</h2>
-            <button onClick={() => handleClick(despesa.id)}>Eliminar despesa</button>
-          </React.Fragment>
-        ))
+      { mostrarDespeses && <Llistat_despesses despeses = {despeses} handleClick={handleClick}/>
+        
         
       
       }
@@ -84,7 +80,9 @@ function App() {
         <h2>Component Modal</h2>
         <p>Ara canviarem el contingut</p>
       </Modal>}
+      
       <div>
+        <br />
         <button onClick={() => setMostraModal(true)}>Mostra Modal</button>
       </div>
 
