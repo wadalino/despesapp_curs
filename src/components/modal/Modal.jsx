@@ -1,11 +1,11 @@
 // sniped 'rfc' and intro
 import './Modal.css';
 
-export default function Modal(props) {
+export default function Modal(children) {
   return (
     <div className="modal-fons">
         <div className="modal">
-            {props.children}
+            {children}
         </div>
     </div>
   )
