@@ -1,6 +1,8 @@
-import { useState } from 'react';
+// to use fragment we need to use React module
+// es una manera de fugir de tenir un element pare i poder utilitzar estils 
+//    es pot utilitzar de forma abreujada eliminant el div (com a Titol.jsx)
+import React, { useState } from 'react';
 import './App.css';
-
 import Titol from './components/titol/Titol';
 
 
@@ -58,10 +60,10 @@ function App() {
 
       { mostrarDespeses && 
         despeses.map((despesa, index)=>(
-          <div key={despesa.id}>
+          <React.Fragment key={despesa.id}>
             <h2>{index+1} - {despesa.concepte}</h2>
             <button onClick={() => handleClick(despesa.id)}>Eliminar despesa</button>
-          </div>
+          </React.Fragment>
         ))
         
       
