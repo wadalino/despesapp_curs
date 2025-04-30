@@ -1,9 +1,11 @@
 // to use fragment we need to use React module
-// es una manera de fugir de tenir un element pare i poder utilitzar estils 
-//    es pot utilitzar de forma abreujada eliminant el div (com a Titol.jsx)
+// NOTE es una manera de fugir de tenir un element pare i poder utilitzar estils 
+//      es pot utilitzar de forma abreujada eliminant el div (com a Titol.jsx)
 import React, { useState } from 'react';
 import './App.css';
 import Titol from './components/titol/Titol';
+// NOTE per que s'importi automaticament recordar que al crearlo <Modal (intro)
+import Modal from './components/modal/Modal';
 
 
 // ESTATS
@@ -69,6 +71,7 @@ function App() {
       
       }
 
+      <Modal />
     </div>
   )
 }
