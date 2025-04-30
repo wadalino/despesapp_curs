@@ -1,0 +1,13 @@
+.despesa-form label,
+.despesa-form input {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 10px auto;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+.despesa-form label {
+    
+}

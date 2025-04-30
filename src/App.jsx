@@ -6,7 +6,8 @@ import './App.css';
 import Titol from './components/titol/Titol';
 // NOTE per que s'importi automaticament recordar que al crearlo <Modal (intro)
 import Modal from './components/modal/Modal';
-import Llistat_despesses from './components/despessesLlista/DespessesLlista';
+import DespesaLlista from './components/despessesLlista/DespessesLlista';
+import DespesaForm from './components/despesaForm/DespesaForm';
 
 
 // ESTATS
@@ -70,20 +71,19 @@ function App() {
       )
       }
 
-      { mostrarDespeses && <Llistat_despesses despeses = {despeses} handleClick={handleClick}/>
+      { mostrarDespeses && <DespesaLlista despeses = {despeses} handleClick={handleClick}/>
         
         
       
       }
 
-      { mostrarModal && <Modal handleTancar = {handleTancar} esVorera={true}>
-        <h2>Component Modal</h2>
-        <p>Ara canviarem el contingut</p>
+      { mostrarModal && <Modal handleTancar = {handleTancar} >
+        <DespesaForm />
       </Modal>}
       
       <div>
         <br />
-        <button onClick={() => setMostraModal(true)}>Mostra Modal</button>
+        <button onClick={() => setMostraModal(true)}>Afegir Despesa</button>
       </div>
 
     </div>
