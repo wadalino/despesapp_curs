@@ -71,7 +71,10 @@ function App() {
       
       }
 
-      <Modal />
+      <Modal>
+        <h2>Component Modal</h2>
+        <p>Ara canviarem el contingut</p>
+      </Modal>
     </div>
   )
 }
