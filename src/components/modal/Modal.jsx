@@ -1,4 +1,5 @@
 // sniped 'rfc' and intro
+import './Modal.css';
 
 export default function Modal() {
   return (
