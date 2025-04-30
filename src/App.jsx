@@ -76,7 +76,7 @@ function App() {
       
       }
 
-      { mostrarModal && <Modal handleTancar = {handleTancar}>
+      { mostrarModal && <Modal handleTancar = {handleTancar} esVorera={true}>
         <h2>Component Modal</h2>
         <p>Ara canviarem el contingut</p>
       </Modal>}
