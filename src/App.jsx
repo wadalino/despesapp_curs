@@ -14,6 +14,10 @@ import Modal from './components/modal/Modal';
 function App() {
   //let titol = "Benvinguts al Curs";
   const [mostrarDespeses, setMostrarDespeses] = useState(true);
+  const [mostrarModal, setMostraModal] = useState(false);
+
+  console.log(setMostraModal);
+
   const subtitol = "Curs de React and Firebase";
   const [despeses, setDespeses] = useState([
     {id:1, concepte: "dinar", quantia: 22.3, pagatPer: "Joan"},
@@ -24,7 +28,7 @@ function App() {
     {id:6, concepte: "hipoteca", quantia: 202.3, pagatPer: "Natalia"},
   ]);
 
-  console.log(mostrarDespeses)
+  console.log(mostrarDespeses);
 
   const handleClick = (id) => {
     // console.log(id);
@@ -40,6 +44,11 @@ function App() {
     )
 
   }
+
+  const handleTancar = () => {
+    setMostraModal(false);
+  }
+  
 
   return (
     <div>
@@ -71,10 +80,14 @@ function App() {
       
       }
 
-      <Modal>
+      { mostrarModal && <Modal handleTancar = {handleTancar}>
         <h2>Component Modal</h2>
         <p>Ara canviarem el contingut</p>
-      </Modal>
+      </Modal>}
+      <div>
+        <button onClick={() => setMostraModal(true)}>Mostra Modal</button>
+      </div>
+
     </div>
   )
 }
