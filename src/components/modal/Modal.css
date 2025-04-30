@@ -10,8 +10,13 @@
 .modal {
     padding: 30px;
     max-width: 480px;
-    margin: 25% auto;
+    margin: 20% auto;
     background: rgba(255,255,255, 1);
     border-radius: 15px;
     color: rgb(0, 0, 0);
+}
+
+.modal h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
