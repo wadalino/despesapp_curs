@@ -20,17 +20,29 @@ function App() {
 
   console.log(setMostraModal);
 
+
   const subtitol = "Curs de React and Firebase";
+
+  const afegirDespesa = (despesa) => {
+    setDespeses((despesesPrevies) => {
+      return [...despesesPrevies, despesa];
+  })
+
+  setMostraModal(false)
+};
+
   const [despeses, setDespeses] = useState([
-    {id:1, concepte: "dinar", quantia: 22.3, pagatPer: "Joan"},
-    {id:2, concepte: "compra", quantia: 72.3, pagatPer: "Natalia"},
-    {id:3, concepte: "ordinador", quantia: 722.3, pagatPer: "Joan"},
-    {id:4, concepte: "chuches", quantia: 2.3, pagatPer: "Joan"},
-    {id:5, concepte: "llum", quantia: 52.3, pagatPer: "Natalia"},
-    {id:6, concepte: "hipoteca", quantia: 202.3, pagatPer: "Natalia"},
+    {id: 1, concepte: "dinar", quantia: 22.3, pagatPer: "Joan"},
+    {id: 2, concepte: "compra", quantia: 72.3, pagatPer: "Natalia"},
+    {id: 3, concepte: "ordinador", quantia: 722.3, pagatPer: "Joan"},
+    {id: 4, concepte: "chuches", quantia: 2.3, pagatPer: "Joan"},
+    {id: 5, concepte: "llum", quantia: 52.3, pagatPer: "Natalia"},
+    {id: 6, concepte: "hipoteca", quantia: 202.3, pagatPer: "Natalia"},
   ]);
 
   console.log(mostrarDespeses);
+
+
 
   const handleClick = (id) => {
     // console.log(id);
@@ -78,7 +90,7 @@ function App() {
       }
 
       { mostrarModal && <Modal handleTancar = {handleTancar} >
-        <DespesaForm />
+        <DespesaForm afegirDespesa={afegirDespesa} />
       </Modal>}
       
       <div>

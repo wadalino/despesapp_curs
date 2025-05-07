@@ -8,6 +8,8 @@ export default function DespessesLlista({despeses, handleClick}) {
     despeses.map((despesa, index)=>(
       <div key={despesa.id} className={estils.targeta}>
         <h2>{index+1} - {despesa.concepte}</h2>
+        <p>{despesa.pagatPer}</p>
+        <p>{despesa.quantia}</p>
         <button onClick={() => handleClick(despesa.id)}>Eliminar despesa</button>
       </div>
     ))
